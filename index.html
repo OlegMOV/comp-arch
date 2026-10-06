@@ -392,7 +392,7 @@ function card([n,t,code,h,title,qs]){
     <h4><a href="#${id}">${esc(title)}</a></h4>
     ${qs.length?`<ol>${qs.map(q=>`<li>${esc(q)}</li>`).join("")}</ol>`:""}
     <div class="l-foot"><span class="hours">${h} год</span>
-      <span class="mats"><a href="#${id}-notes" aria-label="Конспект заняття ${n} (готується)">Конспект</a><a href="#${id}-slides" aria-label="Презентація заняття ${n} (готується)">Слайди</a>${t==="prac"||t==="grp"?`<a href="#${id}-task" aria-label="Завдання заняття ${n} (готується)">Завдання</a>`:""}</span></div>
+      <span class="mats"><a href="${id}.html" aria-label="Конспект заняття ${n} (готується)">Конспект</a><a href="#${id}-slides" aria-label="Презентація заняття ${n} (готується)">Слайди</a>${t==="prac"||t==="grp"?`<a href="#${id}-task" aria-label="Завдання заняття ${n} (готується)">Завдання</a>`:""}</span></div>
   </article>`;
 }
 document.getElementById("modules").innerHTML=MODULES.map(m=>`
